@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+* { margin:0; padding:0; box-sizing:border-box; }
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Source+Sans+Pro&display=swap');
+
+#myVideo{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #343a40;
+    background-size: cover;
+    transition: 1s opacity;
+}
+/* common */
+.height-50{
+    height: 50px;
+}
+.space-20{
+    width: 100%;
+    height: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.space-50{
+    width: 100%;
+    height: 50px;
+}
+.space-100{
+    width: 100%;
+    height: 100px;
+}
+.small_{
+    font-size: 0.7em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.f-3{
+    font-size: 1.2em;
+}
+
+.underline-yellow{
+    text-decoration: underline;
+    text-decoration-color: #f8c246;
+}
+.underline-dark{
+    text-decoration: underline;
+    text-decoration-color: #343a40;
+}
+
+.underline-white{
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.space-holder{
+    background-color: #868e96;
+    height: 300px;
+    width: 100%;
+}
+
+.mapouter{position:relative;text-align:right;height:300px;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:100%;}
+
+.shadow{
+  box-shadow: 0px 0px 10px 10px rgba(34, 34, 34, 0.249);
+  border-radius: 10px;
+}
+
+/* ====== */
+html{
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    /* overflow: hidden;
+    height: 100%; */
+    margin-right: 0px;
+    margin-left: 0px;
+    overflow-x: hidden;
+}
+
+body{
+    margin-top: 0px;
+    padding: 0px;
+    /* height: 100%;
+    overflow: auto; */
+    margin-right: 0px;
+    margin-left: 0px;
+    overflow-x: hidden;
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+body::-webkit-scrollbar {
+    display: none;
   }
+
+.active{
+    background-color: #f8c246;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar{
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-thumb{
+    max-width: 300px;
+    max-height: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url('./Assets/img/bg-1.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.service-box{
+    margin-top: 50px;
+}
+
+.service-box:hover{
+    color: #f8c246;
+}
+
+.about-bg{
+    background-image: url('./Assets/img/bg-2.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: -30px;
+    height: 400px;
+}
+
+
+
+
+/* ====================== */
+
+@media screen and (max-width:767px){
+
+
+    .fixed-top{
+        position: relative;
+    }
+
+    .about-bg{
+        background-attachment:scroll;
+    }
+
+    .logo-thumb{
+        max-width: 200px;
+        max-height: 200px;
+    }
 }
